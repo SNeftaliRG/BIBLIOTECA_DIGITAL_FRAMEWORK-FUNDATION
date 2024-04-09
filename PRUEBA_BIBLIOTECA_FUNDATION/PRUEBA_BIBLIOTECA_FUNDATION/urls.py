@@ -21,7 +21,7 @@ from EJEMPLO.views import ejemploview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',baseview),
-    path('ejemplo/',ejemploview)
+    path('base',baseview),
+    path('',ejemploview)
 
 ]

@@ -10,6 +10,7 @@
         <!--link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/footer.css' %}" >
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" >
 
 
         <!-- foundation-float.min.css: Compressed CSS with legacy Float Grid -->
@@ -23,24 +24,24 @@
         
         <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
         <link rel="stylesheet" href="{% static 'css/app.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style_ejemplo.css' %}">
         
     </head>
-    
-    
     <body>
-           
-
-        {% include "header.html" %}
-        {% include "sidebar.html" %}
-  
-
-     <div  class="container">
-       {% block content %}
-
-       {% endblock %}
-       {% include "footer.html" %}
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                {% include "sidebar.html" %}
+                <div class="off-canvas-content" data-off-canvas-content>
+                    {% include "header.html" %}
+                    {% block content %}{% endblock %}
+                    {% include "footer.html" %}
+                </div>
+            </div>
+        </div>
+            
+        
       
-     </div>
+     
         
     </body>
    

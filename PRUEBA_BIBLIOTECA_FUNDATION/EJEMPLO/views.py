@@ -7,4 +7,4 @@ def baseview(request):
 
 def ejemploview(request):
     #ejemplo llamando a base
-    return render(request,"index.html")
+    return render(request,"index_ejemplo.html")
